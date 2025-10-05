@@ -1,0 +1,395 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+	scroll-padding-top: 60px;	
+	direction: ltr;
+    font-family: 'Roboto', sans-serif; /* Main font for body text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.hero-section {
+    background-image: url('img/back1.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 50px 20px 80px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;	
+}
+
+.main-nav {
+	position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;	
+    background-color: rgba(0, 0, 0, 0.5);	
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.main-nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-shadow: none;	
+    margin-left: 5px;	
+    border-radius: 4px;	
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    background-color: #a80036;
+    color: #fff;
+}																																						
+
+.hero-content {
+    flex-grow: 1;	
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;	
+}
+
+.welcome-message {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: #999;
+}
+
+.main-title {
+    font-family: 'Zen Old Mincho', serif; /* Stylish font for the main title */
+    font-size: 4em;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 87, 87, 0.5);	
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #a80036;
+    margin-bottom: 20px;
+}
+
+.cta-message {
+    font-size: 1.8em;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff00ff, #5000ff, #ff5757, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+}
+
+.profile-pic-hero {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 5px;	
+    border: 5px solid transparent;	
+    background-image: linear-gradient(#1a1a2e, #1a1a2e),	
+    				 linear-gradient(to right, #ff00ff, #5000ff, #ff5757);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic-hero:hover {
+    transform: scale(1.05);
+}
+
+
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+section {
+    padding: 20px 0;
+}
+
+section h2 {
+    color: #a80036;	
+    border-bottom: 10px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-family: 'Zen Old Mincho', serif;
+    font-size: 2em;
+}
+
+article {
+    border-left: 10px solid #0056b3;	
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+article h3 {
+    color: #0056b3;
+    margin-top: 0;
+}
+
+#tips ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+
+.gallery-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.photo-category {
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fafafa;
+    border-left: 5px solid #0056b3;	
+    border-radius: 5px;
+}
+
+.photo-category h3 {
+    color: #0056b3;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;	
+}
+
+.photos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.photos .video-link video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photos a:hover img {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+.photos .video-link {
+    position: relative; /* מאפשר למקם את כפתור הפליי יחסית לעוטף */
+    display: block; /* כדי שה-anchor יתנהג כבלוק ונוכל לשלוט בגודלו */
+    width: 100%; /* שיקח את כל הרוחב הזמין בתא ה-grid */
+    height: 200px; /* גובה קבוע שיתאים לתמונות */
+    overflow: hidden; /* כדי לוודא שהווידאו לא יחרוג */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.photos .video-link:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+.photos .video-link video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ימלא את העוטף וישמור על יחס הגובה-רוחב */
+    display: block; /* כדי למנוע רווחים מיותרים מתחת לווידאו */
+}
+
+/* עיצוב כפתור ההפעלה */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 3em;
+    padding: 15px 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.play-button:hover {
+    opacity: 1;
+}
+.photos a:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+.photos a video {
+    width: 100%;
+    height: 100%; /* ודא שהווידאו ממלא את כל גובה העוטף (200px) */
+    object-fit: cover;
+    display: block;
+}
+
+/* כדי לוודא שתמונות בתוך .photos עדיין נשארות באותו גודל */
+.photos img {
+    width: 100%;	
+    height: 200px;	
+    object-fit: cover;	
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* ה-transition חייב להיות כאן כדי שהאנימציה תעבוד על ההגדלה! */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+}
+
+/* הכלל המתקן: הגדל את התמונה (img) רק כאשר העכבר מעל הקישור (a) */
+.photos a:hover img {
+    transform: scale(1.03);	
+    opacity: 0.9;
+}
+
+/* ודא שהקישורים בגלריה הם position: relative */
+.photos a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 200px;   /* שומר על אותו גובה */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+/* הכיסוי עצמו: נסתר כברירת מחדל */
+.zoom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 86, 179, 0.5); /* כחול שקוף יפה */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* נסתר בדרך כלל */
+    transition: opacity 0.3s ease; /* אנימציה חלקה להצגה */
+    border-radius: 8px; /* כדי להתאים לפינות המעוגלות של התמונה */
+    z-index: 5; /* לוודא שהוא מעל התמונה */
+}
+
+/* האייקון (הפלוס) בתוך הכיסוי */
+.zoom-overlay i {
+    color: white; /* צבע לבן לאייקון */
+    font-size: 3em; /* גודל גדול וברור */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* צל קטן שיוציא את האייקון החוצה */
+}
+
+/* הצגת הכיסוי כאשר העכבר מעל הקישור (התמונה) */
+.photos a:hover .zoom-overlay {
+    opacity: 1; /* הופך לגלוי */
+    cursor: pointer; /* מראה שמדובר באזור לחיץ */
+}
+
+
+/* --- עיצוב FOOTER כולל אייקונים (כללים כלליים) --- */
+footer {
+    /* מיזוג הכללים הישנים והחדשים למיקום ועיצוב */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+
+    /* כללים קיימים */
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+.social-links {
+    display: flex;          /* מסדר לרוחב */
+    justify-content: center; /* ממרכז */
+    gap: 30px;               /* רווחים בין האייקונים */
+    margin-bottom: 5px;
+}
+
+.social-links a {
+    color: white;            /* שהאייקון יהיה לבן */
+    font-size: 4em;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+/* צבע רקע לכל רשת */
+.social-links a:nth-child(1) { background-color: #E1306C; } /* אינסטגרם */
+.social-links a:nth-child(2) { background-color: #6e5494; } /* גיטהאב */
+.social-links a:nth-child(3) { background-color: #0077b5; } /* לינקדאין */
+
+.social-links a:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5em;
+    }
+    .hero-section {
+        padding-top: 20px;
+    }
+    .main-nav ul {
+        justify-content: center;
+    }
+    .profile-pic-hero {
+        width: 200px;
+        height: 200px;
+    }
+}
+
